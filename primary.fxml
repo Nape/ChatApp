@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nadirpelletier.PrimaryController">
+   <top>
+      <VBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="109.0" text="IP distant:" />
+                  <TextField fx:id="tfIPdistant" />
+                  <Label text="Port distant :" />
+                  <TextField fx:id="tfPortDistant" />
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Label text="Nom d'utilisateur:" />
+                  <TextField fx:id="tfNomUtilisateur" />
+                  <Button fx:id="buttonConnection" mnemonicParsing="false" onAction="#connection" prefHeight="27.0" prefWidth="167.0" text="Connection">
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <HBox prefHeight="225.0" prefWidth="800.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="listViewMsg" prefHeight="294.0" prefWidth="399.0" />
+            <ListView fx:id="listViewInfo" prefHeight="222.0" prefWidth="416.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="128.0" prefWidth="761.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <TextArea fx:id="textAreaMsg" prefHeight="63.0" prefWidth="523.0" />
+                  <Button fx:id="buttonEnvoyerMsg" mnemonicParsing="false" onAction="#envoyerMessage" prefHeight="27.0" prefWidth="89.0" text="Envoyer">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="761.0" spacing="97.0">
+               <children>
+                  <Button fx:id="buttonEnvoyerFichier" mnemonicParsing="false" onAction="#envoyerFichier" prefHeight="27.0" prefWidth="591.0" text="Envoyer Fichier ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                  <Button fx:id="buttonQuitter" mnemonicParsing="false" onAction="#quitter" prefHeight="27.0" prefWidth="180.0" text="Quitter">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="30.0" top="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</BorderPane>
